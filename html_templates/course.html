@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="section">
+	<h1 class="title">
+		Course {{ course_number }}: {{ course.title }}
+	</h1>
+	<p>{{ course.description }}</p>
+</div>
+
+{% for lesson in course.lessons %}
+<div class="lesson">
+	<h2 class="lesson-title" id="lesson-{{ loop.index }}">
+		Lesson {{ loop.index }}: {{ lesson.title }}
+	</h2>
+	<p class="subject-text">
+		{{ lesson.description }}
+	</p>
+
+{% for concept in lesson.concepts %}
+	<div class="subject">
+		<div class="subject-title">
+			{{ concept.title }}</div> 
+			<div class="subject-text">{{ concept.description|safe }} </div>
+		</div>
+
+{% endfor %}
+
+</div>
+{% endfor %}
+{% endblock %}

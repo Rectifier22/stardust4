@@ -1,0 +1,35 @@
+Stage4_Frame
+On 10/31/2015 I will be implementing changes recommended by Udacity Coach, Rahuhl.
+- Remove all instances calling 'urllib' as it is not needed for my project. - Completed **Added Back as Wallbook calls it
+ Line 138 ** sign_query_params = urllib.urlencode({'wall_name': wall_name})
+- Remove referrences to FizzBuzz as it is not needed for my project. - Completed
+- Combine code from content_stage4.py into one single stage4.py - Completed
+
+- Removed from Line 11 "from content_stage4 import COURSES"
+
+
+Questions for Udacity Coaches:
+1. Do I have to have the "app = webapp2.WSGIApplication([" section always located at the bottom of my python file?
+ 
+
+In the original Wallbook the HTML string is in a variable called "HTML_TEMPLATE=" which is rendered under the MainPage handler  with the following lines:
+rendered_HTML = HTML_TEMPLATE % (sign_query_params, cgi.escape(wall_name), user_name,
+                                    url, url_linktext, posts_html)
+
+How do I get my comments.html to call all of that?
+I think I need move the html back into the python file and then change my comments template to grab that sting instead. This will result in a very minimal comments.html template 
+
+- Added HTML_Template contents that were needed if called from comments.html template
+- Changed the Wallbook code from "class MainPage(webapp2.RequestHandler):" TO class CommentsHandler(webapp2.RequestHandler):
+
+**** I need to understand the difference from 
+class xxxHandler(webapp2.RequestHandler):
+AND 
+class xxxHandler(Handler):
+
+The comments information is being added to the datastore when clicking POST button, however the webpage is being redirected back to a mainpage type default, BUT it is receiving the instruction from the handler to rename the page to include new extension "http://localhost:15080/?wall_name=Public".
+
+I believe I need to have POST button reload the same comments.html but with updated information from the datastore. 
+Also, the new rendered comments.html overwrites everything as a new file and disregards anything I already have in my comments.html TEMPLATE.
+
+ALSO - It does not matter what application is being used, My new Stage4 app or the Example Wallbook, they both appear to be writing to the same datastore. ??? Dis regard - I was wrong... it was only showing me logged in as the same Fictitious Logged in User. But how do I ensure I create unique datastores for each app?
