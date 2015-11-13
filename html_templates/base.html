@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 
 <html>
-
 	<head>
 		<title>Programming Resources</title>
 		<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 	</head>
-
 	<body style="margin: 0">
 		
-		<h1 style="background-color: #110974; color: #ffc503; margin: 0 height: 50px">
-			Programming Concepts - Udacity: Introduction to Programming Nanodegree Notes
-		</h1>
+		<h1 style="background-color: #0679b4; padding: 3; border: 0; margin: 0">
+			Programming Concepts <br>Udacity: Introduction to Programming Nanodegree</h1>
+		
 		<div class="credit_header">by Tony Cornett</div>
+		<div class="topNav">
+		| <a href="/">Home</a>
+		| <a href="notes.html">Notes</a>
+		| <a href="comments.html">Comments & Suggestions </a> |
+		</div>
 		
 		{% block content %}
 		{% endblock %}
 
-		<h2 style="background-color: #110974; color: #ffc503; margin: 0 height: 50px"> This footer from base.html will be used to provide links to other content and projects from Tony Cornett 
-		</h2>
+		<div id="footer">
+			<div class="footerColumn">
+				<ul>
+					<li><b>Comments?</b></li>
+					<li><a href="comments.html">Give Us Feedback</a></li>
+				</ul>
+			</div>
+			<div class="footerColumn">
+				<ul>
+					<li><b>Jump To:</b></li>
+					<li><a href="/notes.html#course-3">Abstraction</li>
+					<li><a href="/course/4/#lesson-22">String Substitution</li>
+					<li><a href="/course/4/#lesson-26">Templates</li>
+				</ul>
+			</div>
+		</div>
 	</body>
-
 </html>

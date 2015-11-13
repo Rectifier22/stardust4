@@ -1,18 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-
-<div class="section">
-	<h1 class="title">
-		Test 
-	</h1>
-</div>
-
-
-
-
 <form action="/sign?{{ sqp }}" method="post">
     <div><textarea name="content" rows="3" cols="60"></textarea></div>
     <div><input type="submit" value="Post Comment"></div>
+    {% if comment_error %}
+    <span class="error">{{ comment_error }}</span>
+    {% endif %}
   </form>
   <hr>
   <form>Wall:
@@ -23,11 +16,6 @@
   Logged in as: <strong>{{ username }}</strong><br>
   <a href="{{ url }}">{{ urllinktext }}</a>
 
-  <!-- user comments start here -->
   {{ postshtml |safe }}
-
-
-
-
 
 {% endblock %}

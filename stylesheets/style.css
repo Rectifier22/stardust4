@@ -1,24 +1,64 @@
-/* COURSE 1:
-In general, you don't want to style entire elements
-(like I do here, where I apply styles to body, h1, h2,
-and a elements). But notice that these are all very general
-style guidelines, like fonts, colors, etc... */
+
 .credit_header {
-	font-size: 25px;
-	color: blue;
+	background: #333;
+	font-size: 12px;
+	color: #cccccc;
 	text-align:center;
 }
 
+.topNav{
+background: #666;
+border: 0px;
+padding: 0px;
+text-align:center;
+margin-bottom: 2px;
+color: #fff;
+}
+
+.topNav a{
+	color: #FFFFFF;
+}
+
+.topNav a:hover{
+	color: #00008B;
+}
+
+#footer {
+	font-size: 15px;
+	margin: 0 auto;
+	padding-top: 30px;
+	overflow: hidden;
+	background: #FFFFFF;
+}
+
+.footerColumn{
+	color: #333;
+	width: 180px;
+	float: left;
+	text-align: left;
+	margin-left: 35px;
+}
+
+.footerColumn a{
+	color: #0679b4;
+}
+
+.footerColumn a:hover{
+	color: #00008B;
+}
+
+.footerColumn li{
+	list-style-type: none;
+}
 body {
-  font-family: "Whitney SSm A","Whitney SSm B","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: Helvetica,Arial,sans-serif;
   font-size: 18px;
   line-height: 1.7;
   color: #303030;
-  max-width: 960px;
+  max-width: 1960px;
   margin: 0 auto;
+  background-color: #FFFFFF
 }
-
-
 
 h1 {
 	color: white;
@@ -27,16 +67,12 @@ h1 {
 
 h2 {
 	color : #007633;
-	/*294860 */
 }
 
 h3 {
 	margin-bottom: 0;
 }
 
-/* COURSE 1:
-The text-decoration rule I've set here prevents links from
-having underlines (which I don't like).*/
 a {
 	color : #1199c3;
 	text-decoration: none;
@@ -49,6 +85,10 @@ a:hover {
 	color: #307699;
 }
 
+a:active {
+	color: #1199c3;
+}
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -56,93 +96,9 @@ a:hover {
 	box-sizing: border-box;
 }
 
-img,
-embed,
-object,
-video, {
-	max-width : 100%;
-}
 
-.nav a, button {
-	min-width: 48px;
-	min-height: 48px;
-}
-.row {
-	width : 100%;
-	display: flex;
-	flex-wrap: wrap;
-}
 
-.header,
-.footer {
-	background-color: #294860;
-	color: white;
-}
 
-.footer {
-	padding: 20px 20px 60px 20px;
-}
-
-/* COURSE 1:
-I really struggled to get this image to behave
-the way I wanted it to. I'm not too happy with this
-CSS since I don't really understand why it works.
-But... it works and I decided not to worry about it.*/
-.top-image {
-	min-width : 60px;
-	max-width: 100px;
-	width : 10%;
-	min-height : 60px;
-	float: left;
-	margin : 10px 5px;
-}
-
-.header h1,
-.footer {
-	display: block;
-	width : 100%;
-	text-align: center;
-	color: white;
-}
-
-.title {
-	margin-bottom: 0.5em;
-	color: #294860;
-}
-
-/* COURSE 1:
-The rule "list-style-type: none;" removes the bullet points
-from the list.*/
-.nav-list {
-	width:100%;
-	list-style-type:none;
-	text-align: center;
-	padding : 0;
-	margin-top:0;
-	margin-bottom:0;
-}
-
-/* COURSE 5:
-The most interesting rule here is the first one. By setting
-"display: block;", I'm telling the links to take up the whole
-width. This is me designing "mobile-first". You'll notice later
-in the CSS that this display is overridden if the screen width
-is large enough.*/
-.nav-item a {
-	display: block;
-	padding: 0.5em 1em;
-	font-size : 1.3em;
-	color : rgba(255, 255, 255, 0.65);
-}
-
-.nav-item a:hover {
-	color: #307699;
-}
-
-.error {
-	color: #CD0E3E;
-	font-size: smaller;
-}
 
 /* COURSE 5: The @media statement allows me to write
 CSS that only applies under certain circumstances.
@@ -492,4 +448,100 @@ A SEPARATE FILE FOR "HOME PAGE" AND "STUDENT NOTES" */
 	.video {
 		width: 100%;
 	}
+}
+
+########################
+/* Unknown Items to Delete
+img,
+embed,
+object,
+video, {
+	max-width : 100%;
+}
+
+.nav a, button {
+	min-width: 48px;
+	min-height: 48px;
+}
+.row {
+	width : 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header,
+.footer {
+	background-color: #294860;
+	color: white;
+}
+
+.footer {
+	padding: 20px 20px 60px 20px;
+}
+
+/* COURSE 1:
+I really struggled to get this image to behave
+the way I wanted it to. I'm not too happy with this
+CSS since I don't really understand why it works.
+But... it works and I decided not to worry about it.*/
+
+/*
+.top-image {
+	min-width : 60px;
+	max-width: 100px;
+	width : 10%;
+	min-height : 60px;
+	float: left;
+	margin : 10px 5px;
+}
+
+.header h1,
+.footer {
+	display: block;
+	width : 100%;
+	text-align: center;
+	color: white;
+}
+
+.title {
+	margin-bottom: 0.5em;
+	color: #333;
+}
+
+/* COURSE 1:
+The rule "list-style-type: none;" removes the bullet points
+from the list.*/
+
+/*
+.nav-list {
+	width:100%;
+	list-style-type:none;
+	text-align: center;
+	padding : 0;
+	margin-top:0;
+	margin-bottom:0;
+}
+
+/* COURSE 5:
+The most interesting rule here is the first one. By setting
+"display: block;", I'm telling the links to take up the whole
+width. This is me designing "mobile-first". You'll notice later
+in the CSS that this display is overridden if the screen width
+is large enough.*/
+
+/*
+.nav-item a {
+	display: block;
+	padding: 0.5em 1em;
+	font-size : 1.3em;
+	color : rgba(255, 255, 255, 0.65);
+}
+
+.nav-item a:hover {
+	color: #307699;
+}
+
+.error {
+	color: #CD0E3E;
+	font-size: smaller;
 }
